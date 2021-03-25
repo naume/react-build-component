@@ -51,7 +51,8 @@ type GetStylesByProps<T> = (props: T) => ###COMPONENT###FactoryOptionsStyles;
 
 export type ###COMPONENT###FactoryOptions<T = {}> = {
   styles: GetStylesByProps<T> | ###COMPONENT###FactoryOptionsStyles;
-};`;
+};
+`;
 
 function handleWrite(err) {
   if (err) {

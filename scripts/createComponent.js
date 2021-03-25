@@ -8,16 +8,13 @@ import { ###COMPONENT###Props } from './typings';
 
 const ###COMPONENT### = ({ ...props }: ###COMPONENT###Props): ReactElement => {
   console.log('###COMPONENT###', props);
-  return (
-    <>
-      Hello ###COMPONENT###
-    </>
-  );
+  return <>Hello ###COMPONENT###</>;
 };
 
 export default ###COMPONENT###;
 `;
-const typings = `export type ###COMPONENT###Props = {};`;
+const typings = `export type ###COMPONENT###Props = {};
+`;
 
 function handleWrite(err) {
   if (err) {
