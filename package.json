@@ -22,7 +22,8 @@
   "author": "Naume Keculovski",
   "license": "MIT",
   "dependencies": {
-    "commander": "^7.2.0"
+    "commander": "^7.2.0",
+    "cosmiconfig": "^7.0.0"
   },
   "devDependencies": {
     "@types/commander": "2.12.2",

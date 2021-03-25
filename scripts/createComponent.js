@@ -27,25 +27,25 @@ function handleWrite(err) {
   }
 }
 
-function createComponent(name) {
-  const nameCapitalized = name.charAt(0).toUpperCase() + name.slice(1);
+function createComponent(config) {
+  const nameCapitalized = config.name.charAt(0).toUpperCase() + config.name.slice(1);
   const regex = /###COMPONENT###/gi;
   content = contentJsx.replace(regex, `${nameCapitalized}`);
   typingContent = typings.replace(regex, `${nameCapitalized}`);
 
-  fs.mkdir(path.join('src/beobachter', `${nameCapitalized}`), (err) => {
+  fs.mkdir(path.join(config.path, `${nameCapitalized}`), (err) => {
     if (err) {
       return console.error(err);
     }
   });
 
   fs.writeFile(
-    `src/beobachter/${nameCapitalized}/index.tsx`,
+    `${config.path}/${nameCapitalized}/index.tsx`,
     content,
     handleWrite,
   );
   fs.writeFile(
-    `src/beobachter/${nameCapitalized}/typings.tsx`,
+    `${config.path}/${nameCapitalized}/typings.tsx`,
     typingContent,
     handleWrite,
   );
@@ -56,10 +56,10 @@ function createComponent(name) {
 }
 
 module.exports = (config) => {
-  if (!fs.existsSync(`src/beobachter`)) {
-    console.log(chalk.red.bold('App not found!'));
+  if (!fs.existsSync(config.path)) {
+    console.log(chalk.red.bold('Path not found!'), chalk.gray(config.path));
     process.exit(0);
   }
 
-  createComponent(config.name);
+  createComponent(config);
 };

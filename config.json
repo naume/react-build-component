@@ -1,4 +1,5 @@
 {
-  "components": "src/**/screens/components",
-  "factory": "src/**/components"
+  "components": "src/components",
+  "factory": "src/factories",
+  "hoc": "src/shared"
 }
