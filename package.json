@@ -1,15 +1,15 @@
 {
-  "name": "react-component-builder",
+  "name": "react-build-component",
   "version": "0.0.1",
   "description": "create react component fastern then ever",
   "main": "bin/index.js",
   "scripts": {
-    "react-component-builder": "node bin/index.js",
+    "react-build-component": "node bin/index.js",
     "build": "tsc",
     "bin": "yarn run build && node bin/index.js"
   },
   "bin": {
-    "react-component-builder": "./bin/index.js"
+    "react-build-component": "./bin/index.js"
   },
   "keywords": [
     "ts",
@@ -22,26 +22,26 @@
   "author": "Naume Keculovski",
   "license": "MIT",
   "dependencies": {
+    "chalk": "^4.1.0",
     "commander": "^7.2.0",
-    "cosmiconfig": "^7.0.0"
+    "cosmiconfig": "^7.0.0",
+    "inquirer": "^8.0.0"
   },
   "devDependencies": {
     "@types/commander": "2.12.2",
     "@types/node": "14.0.11",
-    "chalk": "^4.1.0",
     "fs-extra": "^9.1.0",
     "glob": "^7.1.6",
-    "inquirer": "^8.0.0",
     "ts-node": "8.10.2",
     "tslint": "5.9.1",
     "typescript": "3.9.5"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/naume/react-component-builder.git"
+    "url": "git+https://github.com/naume/react-build-component.git"
   },
   "bugs": {
-    "url": "https://github.com/naume/react-component-builder/issues"
+    "url": "https://github.com/naume/react-build-component/issues"
   },
-  "homepage": "https://github.com/naume/react-component-builder#readme"
+  "homepage": "https://github.com/naume/react-build-component#readme"
 }
