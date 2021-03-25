@@ -5,7 +5,6 @@
   "main": "bin/index.js",
   "scripts": {
     "react-build-component": "node bin/index.js",
-    "build": "tsc",
     "bin": "yarn run build && node bin/index.js"
   },
   "bin": {
@@ -16,6 +15,9 @@
     "typescript",
     "javascript",
     "react",
+    "components",
+    "factory",
+    "hoc",
     "builder",
     "templates"
   ],
