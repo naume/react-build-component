@@ -17,6 +17,15 @@ example:
   "hoc": "src/shared/decorators" 
 }
 ```
+or create a `.reactBuildComponentrc.json` file with a config:
+```
+{
+  "screenComponents": "src/screens/App/screens", 
+  "components": "src/screens/App/components", 
+  "commonFactory": "src/common/components", 
+  "hoc": "src/shared/decorators" 
+}
+```
 
 default settings:
 ```
