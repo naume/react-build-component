@@ -1,6 +1,6 @@
 {
   "name": "react-build-component",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "create react component fastern then ever",
   "main": "bin/index.js",
   "scripts": {
